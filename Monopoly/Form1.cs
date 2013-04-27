@@ -14,7 +14,7 @@ namespace Monopoly
         int step;
         Random dice = new Random();
         Block[] blocks;
-
+        Player player;
         public Form1()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace Monopoly
         private void Form1_Load(object sender, EventArgs e)
         {
             pictureBox1.Load("map.png");
-            Player player = new Player("Player1", "player1.png", new Size(50, 50), new Point(37, 37));
+            player = new Player("Player1", "player1.png", new Size(50, 50), new Point(37, 37));
             Controls.Add(player.figure);
             player.figure.BringToFront();
             createBlocks();
@@ -102,7 +102,10 @@ namespace Monopoly
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            --step;
+            int from = player.Place;
+            int to = (from + 1) % 24;
+            player.move(blocks[from].Position, blocks[to].Position,25);
         }
     }
 }
