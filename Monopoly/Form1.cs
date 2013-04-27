@@ -28,6 +28,8 @@ namespace Monopoly
             player.figure.BringToFront();
             createBlocks();
 
+            refreshPlayerView();    //顯示玩家資訊
+
             this.timer1.Stop();
         }
 
@@ -98,6 +100,13 @@ namespace Monopoly
             blocks[21].Position = new Point(0, 300);
             blocks[22].Position = new Point(0, 200);
             blocks[23].Position = new Point(0, 100);
+        }
+
+        private void refreshPlayerView()
+        {
+            label9.Text = player.Name;  //顯示玩家名字
+            label5.Text = player.Money.ToString(); //顯示玩家金錢
+            label6.Text = player.State.ToString(); //顯示玩家狀態
         }
 
         private void timer1_Tick(object sender, EventArgs e)
