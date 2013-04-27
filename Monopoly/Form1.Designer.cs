@@ -45,7 +45,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Monopoly.Properties.Resources.map;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -1);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(500, 697);
             this.pictureBox1.TabIndex = 0;
@@ -132,7 +132,7 @@
             // label7
             // 
             this.label7.Font = new System.Drawing.Font("微軟正黑體", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label7.Location = new System.Drawing.Point(507, 361);
+            this.label7.Location = new System.Drawing.Point(519, 357);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(151, 46);
             this.label7.TabIndex = 9;
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(803, 699);
+            this.ClientSize = new System.Drawing.Size(839, 726);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -165,6 +165,8 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "大富翁遊戲";
             this.Load += new System.EventHandler(this.Form1_Load);

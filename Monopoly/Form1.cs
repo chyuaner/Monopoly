@@ -19,7 +19,9 @@ namespace Monopoly
         private void Form1_Load(object sender, EventArgs e)
         {
             pictureBox1.Load("map.png");
-            Player player = new Player("Player1", "map.png", new Size(50, 50), new Point(37, 37));
+            Player player = new Player("Player1", "player1.png", new Size(50, 50), new Point(37, 37));
+            Controls.Add(player.figure);
+            player.figure.BringToFront();
         }
     }
 }

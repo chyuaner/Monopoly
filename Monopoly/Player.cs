@@ -13,7 +13,7 @@ namespace Monopoly
         private int place;
         private int state;
         private int money;
-        private PictureBox figure;
+        public PictureBox figure;
 
         public Player() // 預設建構子
         {
