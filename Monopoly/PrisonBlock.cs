@@ -7,7 +7,7 @@ namespace Monopoly
 {
     class PrisonBlock : Block
     {
-        PrisonBlock(): base()
+        public PrisonBlock(): base()
         {
         }
         public override string execute(Player p)
