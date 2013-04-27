@@ -13,6 +13,7 @@ namespace Monopoly
         private int place;
         private int state;
         private int money;
+        private Point position;
         public PictureBox figure;
 
         public Player() // 預設建構子
@@ -65,7 +66,19 @@ namespace Monopoly
             set { money = value; }
         }
 
+        public Point Position
+        {
+            get { return position; }
+            set { position = value; }
+        }
 
+        public void move(Point from, Point to, int step)
+        {
+            int dirX = to.X - from.X;
+            int dirY = to.Y - from.Y;
+
+            figure.Location = new Point(Position.X + (dirX / step), Position.Y + (dirY / step));
+        }
 
     }
 }
